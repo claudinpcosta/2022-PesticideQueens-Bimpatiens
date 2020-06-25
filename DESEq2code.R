@@ -42,6 +42,7 @@ ddsData <- ddsData[keep,]
 ddsData
 
 
+
 #### PCA ####
 
 # transform expression levels using the regularized log transformation
