@@ -79,8 +79,6 @@ In brief, the workflow:
 4. Exonic expression (read counts) was extracted and summed for genes using featureCount.
 ````
 
-_see [readmapping.sh](https://github.com/claudinpcosta/2020-FatBodyQueens-Bimpatiens/blob/master/readmapping.sh) for codes and  additional information_
-
 ### Identification of differentially expressed genes
 
 Differential gene expression was analysed using the DESeq2 package. The 0 day group was excluded from this factorial analysis because these queens were collected on the day of eclosion and did not receive a diet treatment. Expression data from the 0 day group were analysed for a subset of genes. Read counts were transformed using the variance stabilizing transformation with diet, age, colony, or age × diet as factors in the design for sample clustering and visualization of gene expression levels.
