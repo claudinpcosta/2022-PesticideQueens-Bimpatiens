@@ -83,7 +83,7 @@ In brief, the workflow:
 
 Differential gene expression was analysed using the DESeq2 package. The 0 day group was excluded from this factorial analysis because these queens were collected on the day of eclosion and did not receive a diet treatment. Expression data from the 0 day group were analysed for a subset of genes. Read counts were transformed using the variance stabilizing transformation with diet, age, colony, or age × diet as factors in the design for sample clustering and visualization of gene expression levels.
 
-_see [DESEq2code.R](https://github.com/claudinpcosta/2020-FatBodyQueens-Bimpatiens/blob/master/DESEq2code.R) for the codes, and we can find the input in the folder [Data](https://github.com/claudinpcosta/2020-FatBodyQueens-Bimpatiens/tree/master/Data)_
+_see [DESEq2code.R](https://github.com/claudinpcosta/2020-FatBodyQueens-Bimpatiens/blob/master/DESEq2code.R) for the codes, and we can find the input in the folder [Data](https://github.com/claudinpcosta/2021-PesticideQueens-Bimpatiens/tree/master/DATA)_
 
 ### Gene Ontology enrichment analysis
 
@@ -113,5 +113,5 @@ In brief:
 
 `````````
 
-_see [DESeq2BterBimp.R](https://github.com/claudinpcosta/2020-FatBodyQueens-Bimpatiens/blob/master/DESeq2BterBimp.R) for codes and  and we can find the input in the folder [Data](https://github.com/claudinpcosta/2020-FatBodyQueens-Bimpatiens/tree/master/Data)_
+_see [DESeq2BterBimp.R](https://github.com/claudinpcosta/2020-FatBodyQueens-Bimpatiens/blob/master/DESeq2BterBimp.R) for codes and  and we can find the input in the folder [Data](https://github.com/claudinpcosta/2021-PesticideQueens-Bimpatiens/tree/master/DATA)_
 
