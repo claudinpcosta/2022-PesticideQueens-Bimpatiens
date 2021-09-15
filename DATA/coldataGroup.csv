@@ -1,0 +1,10 @@
+,Diet,Pesticide
+H_CTL,Diet-2,not exposed
+H_IMDA,Diet-2,IMD-A
+H_IMDB,Diet-2,IMD-B
+R_CTL,Diet-1,not exposed
+R_IMDA,Diet-1,IMD-A
+R_IMDB,Diet-1,IMD-B
+M_CTL,Combined diet,not exposed
+M_IMDA,Combined diet,IMD-A
+M_IMDB,Combined diet,IMD-B
