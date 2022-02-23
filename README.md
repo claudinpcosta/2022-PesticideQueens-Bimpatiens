@@ -80,20 +80,14 @@ In brief, the workflow:
 
 ### Identification of differentially expressed genes
 
-Differential gene expression was analysed using the DESeq2 package. Read counts were transformed using the variance stabilizing transformation with diet, age, colony, or age × diet as factors in the design for sample clustering and visualization of gene expression levels.
+Differential gene expression was analysed using the DESeq2 package. Read counts were transformed using the variance stabilizing transformation with colony, pesticide, diet, or pesticide x diet as factors in the design for sample clustering and visualization of gene expression levels.
 
-_see [DESEq2code.R](https://github.com/claudinpcosta/2020-FatBodyQueens-Bimpatiens/blob/master/DESEq2code.R) for the codes, and we can find the input in the folder [Data](https://github.com/claudinpcosta/2021-PesticideQueens-Bimpatiens/tree/master/DATA)_
+_see [DESEq2code.R](https://github.com/claudinpcosta/2022-PesticideQueens-Bimpatiens/blob/master/Scripts/DESEq2code.R) for the codes, and we can find the input in the folder [Data](https://github.com/claudinpcosta/2022-PesticideQueens-Bimpatiens/tree/master/Data)_
 
 ### Gene Ontology enrichment analysis
 
-We used GO enrichment analysis to explore gene functions that were overrepresented within the natal colony, age, diet and age × diet DEG lists. In brief:
+We used Gene Ontology (GO) enrichment analysis to explore gene functions that were overrepresented within the pesticide, diet, and pesticide x diet DEG lists.
 
-````````
-1.Coding sequences from our B. impatiens gene data set were matched to honey bee (A. mellifera) orthologues in the A. mellifera genome version 4.5 using a blastp reciprocal best match (E-value 1e−6), following the procedure used by Harpur et al. (2017);
-2. Previously identified D. melanogaster orthologues were located for these A. mellifera genes in the Ensembl database (Zerbino et al., 2018);
-3. Enrichment analysis of “complete” and “slim” GO terms (both biological processes and molecular functions terms) was performed using panther (http://pantherdb.org/tools/compareToRefList.jsp).
-
-`````````
-
+_see [GoInputCode.R](https://github.com/claudinpcosta/2022-PesticideQueens-Bimpatiens/blob/master/Scripts/GoInputCode.R) for the codes, and we can find the input in the folder [Data](https://github.com/claudinpcosta/2022-PesticideQueens-Bimpatiens/tree/master/Data)_
 
 
