@@ -26,23 +26,23 @@ We used RNA sequencing to explore the sublethal consequences of neonicotinoid pe
 |Q91B |	F2 |	diet.1 |	Cistus |	rockrose |	chronic.exposure |	IMD-B |
 |Q225B |	F3 |	diet.1 |	Cistus |	rockrose |	chronic.exposure |	IMD-B |
 |Q138B |	F4 |	diet.1 |	Cistus |	rockrose |	chronic.exposure |	IMD-B |
-|Q31B |	F2 |	diet.2 |	Erica |	heather	no.exposured |	control  |
-|Q50B |	F2 |	diet.2 |	Erica |	heather	no.exposured |	control  |
-|Q53B |	F3 |	diet.2 |	Erica |	heather	no.exposured |	control  |
-|Q63B |	F3 |	diet.2 |	Erica |	heather	no.exposured |	control  |
-|Q29B |	F4 |	diet.2 |	Erica |	heather	no.exposured |	control  |
-|Q70B |	F4 |	diet.2 |	Erica |	heather	no.exposured |	control  |
-|Q077 |	F2 |	diet.2 |	Erica |	heather	early.exposure |	IMD-A |
-|Q35B |	F2 |	diet.2 |	Erica |	heather	early.exposure |	IMD-A |
-|Q114 |	F3 |	diet.2 |	Erica |	heather	early.exposure |IMD-A |
-|Q44B |	F3 |	diet.2 |	Erica |	heather	early.exposure |	IMD-A |
+|Q31B |	F2 |	diet.2 |	Erica |	heather |	no.exposured |	control  |
+|Q50B |	F2 |	diet.2 |	Erica |	heather	 |no.exposured |	control  |
+|Q53B |	F3 |	diet.2 |	Erica |	heather	 |no.exposured |	control  |
+|Q63B |	F3 |	diet.2 |	Erica |	heather |	no.exposured |	control  |
+|Q29B |	F4 |	diet.2 |	Erica |	heather	 |no.exposured |	control  |
+|Q70B |	F4 |	diet.2 |	Erica |	heather |	no.exposured |	control  |
+|Q077 |	F2 |	diet.2 |	Erica |	heather	 |early.exposure |	IMD-A |
+|Q35B |	F2 |	diet.2 |	Erica |	heather |	early.exposure |	IMD-A |
+|Q114 |	F3 |	diet.2 |	Erica |	heather |	early.exposure |IMD-A |
+|Q44B |	F3 |	diet.2 |	Erica |	heather	 |early.exposure |	IMD-A |
 |Q154B |	F4 |	diet.2 |	Erica |	heather	early.exposure |	IMD-A |
 |Q196B |	F4 |	diet.2 |	Erica |	heather	early.exposure |	IMD-A |
-|Q122 |	F2 |	diet.2 |	Erica |	heather	chronic.exposure |	IMD-B |
-|Q90B |	F2 |	diet.2 |	Erica |	heather	chronic.exposure |	IMD-B |
-|Q168B |	F3 |	diet.2 |	Erica |	heather	chronic.exposure |	IMD-B |
-|Q186 |	F4 |	diet.2 |	Erica |	heather	chronic.exposure |	IMD-B |
-|Q81B |	F4 |	diet.2 |	Erica |	heather	chronic.exposure |	IMD-B |
+|Q122 |	F2 |	diet.2 |	Erica |	heather |	chronic.exposure |	IMD-B |
+|Q90B |	F2 |	diet.2 |	Erica |	heather	 |chronic.exposure |	IMD-B |
+|Q168B |	F3 |	diet.2 |	Erica |	heather	 |chronic.exposure |	IMD-B |
+|Q186 |	F4 |	diet.2 |	Erica |	heather |	chronic.exposure |	IMD-B |
+|Q81B |	F4 |	diet.2 |	Erica |	heather |	chronic.exposure |	IMD-B |
 |Q55B |	F2 |	combined.diet |	na |	combined |	no.exposured |	control |
 |Q76B |	F2 |	combined.diet |	na |	combined |	no.exposured |	control |
 |Q180 |	F3 |	combined.diet |	na |	combined |	no.exposured | 	control |
