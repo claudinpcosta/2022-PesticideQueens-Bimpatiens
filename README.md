@@ -80,7 +80,7 @@ In brief, the workflow:
 
 ### Identification of differentially expressed genes
 
-Differential gene expression was analysed using the DESeq2 package. The 0 day group was excluded from this factorial analysis because these queens were collected on the day of eclosion and did not receive a diet treatment. Expression data from the 0 day group were analysed for a subset of genes. Read counts were transformed using the variance stabilizing transformation with diet, age, colony, or age × diet as factors in the design for sample clustering and visualization of gene expression levels.
+Differential gene expression was analysed using the DESeq2 package. Read counts were transformed using the variance stabilizing transformation with diet, age, colony, or age × diet as factors in the design for sample clustering and visualization of gene expression levels.
 
 _see [DESEq2code.R](https://github.com/claudinpcosta/2020-FatBodyQueens-Bimpatiens/blob/master/DESEq2code.R) for the codes, and we can find the input in the folder [Data](https://github.com/claudinpcosta/2021-PesticideQueens-Bimpatiens/tree/master/DATA)_
 
@@ -95,22 +95,5 @@ We used GO enrichment analysis to explore gene functions that were overrepresent
 
 `````````
 
-### Analysis of diapause-related gene expression
 
-We also performed a molecular test of the hypothesis that age and diet mediate entry into diapause in bumble bee queens. For this, we performed a Fisher's exact test to identify whether there was a significant degree of overlap between:
-
-_(a) genes differentially expressed between the B. impatiens queens in our study, at age 12 days and fed the 75% sucrose diet (12 days/75%) vs all other samples, and
-(b) the B. terrestris queen diapause gene list from [Amsalem et al. (2015)](https://onlinelibrary.wiley.com/doi/abs/10.1111/mec.13410)_
-	
-	
-In brief:
-
-````````
-1. Generate gene lists from our B. impatiens data set for this analysis, we performed pairwise Wald tests using DESeq2 (see Identification of differentially expressed genes for codes and inputs);
-2. Generate B. terrestris data set, we performed deseq2 with treatment group as the only factor in the model and then used the Wald test to obtain DEGs;
-3. Fisher's exact tests of overlap our lists and Amsalem's lists.
-
-`````````
-
-_see [DESeq2BterBimp.R](https://github.com/claudinpcosta/2020-FatBodyQueens-Bimpatiens/blob/master/DESeq2BterBimp.R) for codes and  and we can find the input in the folder [Data](https://github.com/claudinpcosta/2021-PesticideQueens-Bimpatiens/tree/master/DATA)_
 
