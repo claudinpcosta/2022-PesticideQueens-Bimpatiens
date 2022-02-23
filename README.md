@@ -9,7 +9,7 @@ We used RNA sequencing to explore the sublethal consequences of neonicotinoid pe
 ### Sample Information
 
 |Queen.ID |	Source.colony |	Pollen.diet |	Pollen.plant.genus | 	Pollen.diet.type |	Pesticide.exposure |	Pesticide.group |
-|---------|-------------------|--------------|----------------------|---------------------|-------------------------|-------------------|-------
+|---------|-------------------|--------------|----------------------|---------------------|-------------------------|-------------------|
 |Q085 |	F2 |	diet.1 |	Cistus |	rockrose |	no.exposured |	control |
 |Q54B |	F2 |	diet.1 |	Cistus |	rockrose |	no.exposured |	control |
 |Q41B |	F3 |	diet.1 |	Cistus |	rockrose |	no.exposured |	control |
