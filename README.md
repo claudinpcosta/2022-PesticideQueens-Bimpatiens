@@ -36,8 +36,8 @@ We used RNA sequencing to explore the sublethal consequences of neonicotinoid pe
 |Q35B |	F2 |	diet.2 |	Erica |	heather |	early.exposure |	IMD-A |
 |Q114 |	F3 |	diet.2 |	Erica |	heather |	early.exposure |IMD-A |
 |Q44B |	F3 |	diet.2 |	Erica |	heather	 |early.exposure |	IMD-A |
-|Q154B |	F4 |	diet.2 |	Erica |	heather	early.exposure |	IMD-A |
-|Q196B |	F4 |	diet.2 |	Erica |	heather	early.exposure |	IMD-A |
+|Q154B |	F4 |	diet.2 |	Erica |	heather |	early.exposure |	IMD-A |
+|Q196B |	F4 |	diet.2 |	Erica |	heather |	early.exposure |	IMD-A |
 |Q122 |	F2 |	diet.2 |	Erica |	heather |	chronic.exposure |	IMD-B |
 |Q90B |	F2 |	diet.2 |	Erica |	heather	 |chronic.exposure |	IMD-B |
 |Q168B |	F3 |	diet.2 |	Erica |	heather	 |chronic.exposure |	IMD-B |
@@ -63,7 +63,7 @@ We used RNA sequencing to explore the sublethal consequences of neonicotinoid pe
 |Q93B |	F2 |	combined.diet |	na |	combined |	early.exposure |	IMD-B |
 |Q101B |	F3 |	combined.diet |	na |	combined |	chronic.exposure |	IMD-B |
 |Q141 |	F4 |	combined.diet |	na |	combined |	early.exposure |	IMD-B |
-|Q96B |	F4 |	combined.diet |	nav	combined |	chronic.exposure |	IMD-B |
+|Q96B |	F4 |	combined.diet |	na |	combined |	chronic.exposure |	IMD-B |
 
 
 ### Alignment details
