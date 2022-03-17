@@ -163,7 +163,7 @@ head(BimpLocBimp)
 dim(BimpLocBimp)
 
 write.csv(as.data.frame(BimpLocBimp),
-          file="~/Dropbox/2021-PesticideQueens-Bimpatiens/RNAseq/Data/BimpLocBimp.csv")
+          file="~/Dropbox/2022-PesticideQueens-Bimpatiens/RNAseq/Data/BimpLocBimp.csv")
 
 #Now create a folder to save results for this analysis
 dir.create("RNAseq/Results") #create a folder all results
@@ -197,9 +197,10 @@ dim(ColDEG)
 
 #final DEGs list for Colony!!!!!
 write.csv(as.data.frame(ColDEG),
-          file="~/Dropbox/2021-PesticideQueens-Bimpatiens/RNAseq/Results/LRT/DEGsColony.csv")
+          file="~/Dropbox/2022-PesticideQueens-Bimpatiens/RNAseq/Results/LRT/DEGsColony.csv")
 
-#Pollen DEGs
+
+#Pollen DEGs filtered
 PolDEG <- as.data.frame(GLPollen)
 head(PolDEG)
 dim(PolDEG)
@@ -221,6 +222,10 @@ head(PolDEG, 30)
 PolDEG <- PolDEG[!duplicated(PolDEG$Locus), ]
 head(PolDEG, 30)
 dim(PolDEG)
+
+#DEGs list for POllen no Filtered!!!!!
+write.csv(as.data.frame(PolDEG),
+          file="~/Dropbox/2022-PesticideQueens-Bimpatiens/RNAseq/Results/LRT/DEGsPollenNoFiltered.csv")
 
 
 #Pesticide DEGs
@@ -246,6 +251,10 @@ PesDEG <- PesDEG[!duplicated(PesDEG$Locus), ]
 head(PesDEG, 30)
 dim(PesDEG)
 
+#DEGs list for POllen no Filtered!!!!!
+write.csv(as.data.frame(PesDEG),
+          file="~/Dropbox/2022-PesticideQueens-Bimpatiens/RNAseq/Results/LRT/DEGsPesticideNoFiltered.csv")
+
 
 #Interaction DEGs
 IntDEG <- as.data.frame(GLInteraction)
@@ -269,6 +278,10 @@ head(IntDEG, 30)
 IntDEG <- IntDEG[!duplicated(IntDEG$Locus), ]
 head(IntDEG, 30)
 dim(IntDEG)
+
+#DEGs list for POllen no Filtered!!!!!
+write.csv(as.data.frame(IntDEG),
+          file="~/Dropbox/2022-PesticideQueens-Bimpatiens/RNAseq/Results/LRT/DEGsInteractionNoFiltered.csv")
 
 
 ##Filtering
@@ -307,9 +320,9 @@ summary(DEGsPollen1)
 head(DEGsPollen1)
 dim(DEGsPollen1)
 
-#final DEGs list for Pollen!!!!!
+#final DEGs list for Pollen - Filtered!!!!!
 write.csv(as.data.frame(DEGsPollen1),
-          file="~/Dropbox/2021-PesticideQueens-Bimpatiens/RNAseq/Results/LRT/DEGsPollen.csv")
+          file="~/Dropbox/2022-PesticideQueens-Bimpatiens/RNAseq/Results/LRT/DEGsPollen.csv")
 
 #Filter PESTICIDE by Pollen
 
@@ -318,9 +331,9 @@ summary(DEGsPesticide1)
 head(DEGsPesticide1)
 dim(DEGsPesticide1)
 
-#final DEGs list for Pollen!!!!!
+#final DEGs list for Pesticide - Filtered!!!!!
 write.csv(as.data.frame(DEGsPesticide1),
-          file="~/Dropbox/2021-PesticideQueens-Bimpatiens/RNAseq/Results/LRT/DEGsPesticide.csv")
+          file="~/Dropbox/2022-PesticideQueens-Bimpatiens/RNAseq/Results/LRT/DEGsPesticide.csv")
 
 #DEGs excluisve for interaction
 
@@ -333,9 +346,9 @@ summary(DEGsInteraction)
 head(DEGsInteraction)
 dim(DEGsInteraction)
 
-#final DEGs list for Interaction!!!!!
+#final DEGs list for Interaction - Filtered!!!!!
 write.csv(as.data.frame(DEGsInteraction),
-          file="~/Dropbox/2021-PesticideQueens-Bimpatiens/RNAseq/Results/LRT/DEGsInteraction.csv")
+          file="~/Dropbox/2022-PesticideQueens-Bimpatiens/RNAseq/Results/LRT/DEGsInteraction.csv")
 
 
 #### GO enrichment analyses for LRT Gene lists ####
@@ -392,7 +405,7 @@ cutoff_for_top_fivepercent <- quantile(x = topgo_genelist, probs = 0.05)
 #1st create a folder to save results for GO analysis
 dir.create("RNAseq/Results.GO")
 #now output directory for each DEGs list
-output_directory <- "~/Dropbox/2021-PesticideQueens-Bimpatiens/RNAseq/Results.GO/output_LRT.Int"
+output_directory <- "~/Dropbox/2022-PesticideQueens-Bimpatiens/RNAseq/Results.GO/output_LRT.Int"
 if (file.exists(output_directory)) {
   stop("The output directory:", output_directory, ", already exists",
        "Let's avoid overwriting")
@@ -489,7 +502,7 @@ cutoff_for_top_fivepercent <- quantile(x = topgo_genelist, probs = 0.05)
 
 #create output folder
 #now output directory for each DEGs list
-output_directory <- "~/Dropbox/2021-PesticideQueens-Bimpatiens/RNAseq/Results.GO/output_LRT.Pes"
+output_directory <- "~/Dropbox/2022-PesticideQueens-Bimpatiens/RNAseq/Results.GO/output_LRT.Pes"
 if (file.exists(output_directory)) {
   stop("The output directory:", output_directory, ", already exists",
        "Let's avoid overwriting")
@@ -587,7 +600,7 @@ cutoff_for_top_fivepercent <- quantile(x = topgo_genelist, probs = 0.05)
 
 #create output folder
 #now output directory for each DEGs list
-output_directory <- "~/Dropbox/2021-PesticideQueens-Bimpatiens/RNAseq/Results.GO/output_LRT.Pol"
+output_directory <- "~/Dropbox/2022-PesticideQueens-Bimpatiens/RNAseq/Results.GO/output_LRT.Pol"
 if (file.exists(output_directory)) {
   stop("The output directory:", output_directory, ", already exists",
        "Let's avoid overwriting")
@@ -725,7 +738,7 @@ head(ExCDEG, 30)
 dim(ExCDEG)
 
 write.csv(as.data.frame(ExCDEG),
-          file="~/Dropbox/2021-PesticideQueens-Bimpatiens/RNAseq/Results/Pairwise-Pollen/DEGsErica_vs_Cistus.csv")
+          file="~/Dropbox/2022-PesticideQueens-Bimpatiens/RNAseq/Results/Pairwise-Pollen/DEGsErica_vs_Cistus.csv")
 
 
 #Erica_vs_Mixed DEGs
@@ -752,7 +765,7 @@ head(MxEDEG, 30)
 dim(MxEDEG)
 
 write.csv(as.data.frame(MxEDEG),
-          file="~/Dropbox/2021-PesticideQueens-Bimpatiens/RNAseq/Results/Pairwise-Pollen/DEGsMixed_vs_Erica.csv")
+          file="~/Dropbox/2022-PesticideQueens-Bimpatiens/RNAseq/Results/Pairwise-Pollen/DEGsMixed_vs_Erica.csv")
 
 
 #### Gene lists by Wald-Test - Pesticide ####
@@ -822,7 +835,7 @@ head(BxADEG, 30)
 dim(BxADEG)
 
 write.csv(as.data.frame(BxADEG),
-          file="~/Dropbox/2021-PesticideQueens-Bimpatiens/RNAseq/Results/Pairwise-Pesticide/DEGsIMDB_vs_IMDA.csv")
+          file="~/Dropbox/2022-PesticideQueens-Bimpatiens/RNAseq/Results/Pairwise-Pesticide/DEGsIMDB_vs_IMDA.csv")
 
 
 #IMD.A_vs_untreated DEGs
@@ -849,7 +862,7 @@ head(CxADEG, 30)
 dim(CxADEG)
 
 write.csv(as.data.frame(CxADEG),
-     file="~/Dropbox/2021-PesticideQueens-Bimpatiens/RNAseq/Results/Pairwise-Pesticide/DEGsControl_vs_IMDA.csv")
+     file="~/Dropbox/2022-PesticideQueens-Bimpatiens/RNAseq/Results/Pairwise-Pesticide/DEGsControl_vs_IMDA.csv")
 
 
 #IMD.B_vs_untreated DEGs
@@ -876,7 +889,7 @@ head(CxBDEG, 30)
 dim(CxBDEG)
 
 write.csv(as.data.frame(CxBDEG),
-          file="~/Dropbox/2021-PesticideQueens-Bimpatiens/RNAseq/Results/Pairwise-Pesticide/DEGsControl_vs_IMDB.csv")
+          file="~/Dropbox/2022-PesticideQueens-Bimpatiens/RNAseq/Results/Pairwise-Pesticide/DEGsControl_vs_IMDB.csv")
 
 
 #### Gene lists by Wald-Test - Group ####
@@ -944,7 +957,7 @@ head(HbxHcDEG, 30)
 dim(HbxHcDEG)
 
 write.csv(as.data.frame(HbxHcDEG),
-          file="~/Dropbox/2021-PesticideQueens-Bimpatiens/RNAseq/Results/Group-Diet-H/DEGsH_IMDB_vs_H_CTL.csv")
+          file="~/Dropbox/2022-PesticideQueens-Bimpatiens/RNAseq/Results/Group-Diet-H/DEGsH_IMDB_vs_H_CTL.csv")
 
 
 #H_IMDA_vs_H_IMDB DEGs
@@ -971,7 +984,7 @@ head(HaxHbDEG, 30)
 dim(HaxHbDEG)
 
 write.csv(as.data.frame(HaxHbDEG),
-          file="~/Dropbox/2021-PesticideQueens-Bimpatiens/RNAseq/Results/Group-Diet-H/DEGsH_IMDA_vs_H_IMDB.csv")
+          file="~/Dropbox/2022-PesticideQueens-Bimpatiens/RNAseq/Results/Group-Diet-H/DEGsH_IMDA_vs_H_IMDB.csv")
 
 
 # 2. List Group by Diet-M ####
@@ -1038,7 +1051,7 @@ head(RaxRcDEG, 30)
 dim(RaxRcDEG)
 
 write.csv(as.data.frame(RaxRcDEG),
-          file="~/Dropbox/2021-PesticideQueens-Bimpatiens/RNAseq/Results/Group-Diet-R/DEGsR_IMDA_vs_R_CTL.csv")
+          file="~/Dropbox/2022-PesticideQueens-Bimpatiens/RNAseq/Results/Group-Diet-R/DEGsR_IMDA_vs_R_CTL.csv")
 
 
 # 4. List Group by Pesticide-IMD-A ####
@@ -1094,7 +1107,7 @@ head(aHxaRDEG, 30)
 dim(aHxaRDEG)
 
 write.csv(as.data.frame(aHxaRDEG),
-          file="~/Dropbox/2021-PesticideQueens-Bimpatiens/RNAseq/Results/Group-Pesticide-IMD-A/DEGsH_IMDA_vs_R_IMDA.csv")
+          file="~/Dropbox/2022-PesticideQueens-Bimpatiens/RNAseq/Results/Group-Pesticide-IMD-A/DEGsH_IMDA_vs_R_IMDA.csv")
 
 
 #M_IMDA_vs_H_IMDA DEGs
@@ -1121,7 +1134,7 @@ head(aMxaHDEG, 30)
 dim(aMxaHDEG)
 
 write.csv(as.data.frame(aMxaHDEG),
-          file="~/Dropbox/2021-PesticideQueens-Bimpatiens/RNAseq/Results/Group-Pesticide-IMD-A/DEGsM_IMDA_vs_H_IMDA.csv")
+          file="~/Dropbox/2022-PesticideQueens-Bimpatiens/RNAseq/Results/Group-Pesticide-IMD-A/DEGsM_IMDA_vs_H_IMDA.csv")
 
 
 # 5. List Group by Pesticide-IMD-B ####
@@ -1177,7 +1190,7 @@ head(bHxbRDEG, 30)
 dim(bHxbRDEG)
 
 write.csv(as.data.frame(bHxbRDEG),
-          file="~/Dropbox/2021-PesticideQueens-Bimpatiens/RNAseq/Results/Group-Pesticide-IMD-B/DEGsH_IMDB_vs_R_IMDB.csv")
+          file="~/Dropbox/2022-PesticideQueens-Bimpatiens/RNAseq/Results/Group-Pesticide-IMD-B/DEGsH_IMDB_vs_R_IMDB.csv")
 
 
 #M_IMDB_vs_H_IMDB DEGs
@@ -1204,7 +1217,7 @@ head(bMxbHDEG, 30)
 dim(bMxbHDEG)
 
 write.csv(as.data.frame(bMxbHDEG),
-          file="~/Dropbox/2021-PesticideQueens-Bimpatiens/RNAseq/Results/Group-Pesticide-IMD-B/DEGsM_IMDB_vs_H_IMDB.csv")
+          file="~/Dropbox/2022-PesticideQueens-Bimpatiens/RNAseq/Results/Group-Pesticide-IMD-B/DEGsM_IMDB_vs_H_IMDB.csv")
 
 
 # 6. List Group by Pesticide-Control ####
@@ -1257,7 +1270,7 @@ head(cMxcHDEG, 30)
 dim(cMxcHDEG)
 
 write.csv(as.data.frame(cMxcHDEG),
-          file="~/Dropbox/2021-PesticideQueens-Bimpatiens/RNAseq/Results/Group-Pesticide-Control/DEGsM_CTL_vs_H_CTL.csv")
+          file="~/Dropbox/2022-PesticideQueens-Bimpatiens/RNAseq/Results/Group-Pesticide-Control/DEGsM_CTL_vs_H_CTL.csv")
 
 
 #### Figures ####
@@ -1634,13 +1647,13 @@ p
 ####Fig - Heatmap####
 
 #I used a FKPM data per group to run the heatmap and I based in this tutorial: https://igordot.github.io/tutorials/heatmaps-2017-07.nb.html
-#read counts
+
+#read counts - Per group
 fpkmGroup <- read.csv("RNAseq/Data/fpkm_group.csv", header = T, row.names = 1)
 head(fpkmGroup)
 dim(fpkmGroup)
 heat <- zFPKM(fpkmGroup)
-#using the subset for DEGs 
-genes.sig <- HbxHcDEG
+genes.sig <- HbxHcDEG #using the subset for DEGs 
 heat <- heat[which(rownames(heat) %in% genes.sig$Locus), ]
 heat <- as.matrix(sapply(heat, as.numeric))  
 heat <- na.omit(heat)
@@ -1661,9 +1674,49 @@ AnnColour <- list(
   Diet = dietCol,
   Pesticide = pesticideCol)
 
-htm <- pheatmap(heat, cluster_rows = TRUE, show_rownames = FALSE, show_colnames = FALSE, cluster_cols = T, scale = "row", treeheight_row = 0,  annotation_col = df, annotation_colors = AnnColour,
+htmG <- pheatmap(heat, cluster_rows = TRUE, show_rownames = FALSE, show_colnames = FALSE, cluster_cols = T, scale = "row", treeheight_row = 0,  annotation_col = df, annotation_colors = AnnColour,
          clustering_distance_rows = "euclidean", clustering_distance_cols = "euclidean", clustering_method = "complete")
-htm
+htmG 
+
+
+#read counts - Per Sample
+fpkmGroupS <- read.csv("RNAseq/Data/fpkm_sample.csv", header = T, row.names = 1)
+head(fpkmGroupS)
+dim(fpkmGroupS)
+heatS <- zFPKM(fpkmGroupS)
+genes.sig <- HbxHcDEG #using the subset for DEGs 
+heatS <- heatS[which(rownames(heatS) %in% genes.sig$Locus), ]
+heatS <- as.matrix(sapply(heatS, as.numeric))  
+heatS <- na.omit(heatS)
+is.numeric(heatS[1:54])
+heatS <- heatS[!is.infinite(rowSums(heatS)),]
+head(heatS)
+dim(heatS)
+
+dfS <- read.csv("RNAseq/Data/coldata.csv", header = T, row.names = 1)
+dim(dfS)
+head(dfS)
+dfS = subset(dfS, select = c(Pollen.diet,Pesticide))
+dim(dfS)
+head(dfS)
+dfS[dfS == "Combined.diet"] <- "Combined diet"
+dfS[dfS == "untreated"] <- "not exposed"
+names(dfS)[1] <- "Diet"
+dim(dfS)
+head(dfS)
+dfS$Diet = factor(dfS$Diet, levels = c("Diet-1", "Diet-2", "Combined diet"))
+dietColS <- c("darkgreen", "darkolivegreen1","chartreuse3")
+names(dietColS) <- levels(dfS$Diet)
+dfS$Pesticide = factor(dfS$Pesticide, levels = c("not exposed", "IMD-A", "IMD-B"))
+pesticideColS <- c("rosybrown2", "darkorange4", "darkorange2")
+names(pesticideColS) <- levels(dfS$Pesticide)
+AnnColourS <- list(
+  Diet = dietColS,
+  Pesticide = pesticideColS)
+
+htmS <- pheatmap(heatS, cluster_rows = TRUE, show_rownames = FALSE, show_colnames = FALSE, cluster_cols = T, scale = "row", treeheight_row = 0,  annotation_col = dfS, annotation_colors = AnnColourS,
+                clustering_distance_rows = "euclidean", clustering_distance_cols = "euclidean", clustering_method = "complete")
+htmS 
 
 
 ####Fig - Plots for specific genes by Wald-Test Group####
