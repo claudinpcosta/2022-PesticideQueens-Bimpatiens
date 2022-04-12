@@ -1,6 +1,6 @@
 # 2022-PesticideQueens-Bimpatiens
 
-## Contains all analyses performed on datasets for transcriptome analysis in the brain of unmated bumble bee queens exposure by pesticide [(Costa et al. in prep)](https://onlinelibrary.wiley.com/doi/abs/10.1111/mec.15361)
+## Contains all analyses performed on datasets for transcriptome analysis in the brain of unmated bumble bee queens exposure by pesticide [(Costa et al. 2022)](https://doi.org/10.1016/j.scitotenv.2022.155216)
 
 ### Synopsis
 
